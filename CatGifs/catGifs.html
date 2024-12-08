@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make a gif talk!</title>
+        <link rel="stylesheet" href="catGifs.css">
+    </head>
+    <body>
+        <div id="navbar">
+            <ul>
+                <li><h1>Cats</h1></li>
+                <li><a href="#" onclick="loadPopup();return false;">Get a cat!</a></li>
+                <li><a href="catGifs.html">Make a gif talk!</a></li>
+            </ul>
+        </div>
+        <div class="card" id="card">
+            <div id="cardPic">
+                <img id="catPic" src="">
+            </div>
+            <div>
+                <h4 id="cardText"></h4>
+            </div>
+        </div>
+        <div id="formWrapper">
+        <form name="form" onsubmit="return false">
+            <fieldset>
+            <legend>Type a CATch phrase!</legend>
+                <input type="text" id="text">
+            </fieldset>
+            <fieldset>
+            <legend>Choose a filter!</legend>
+                <select id="filter">
+                    <option value="no">No filter</option>
+                    <option value="mono">Monochrome</option>
+                    <option value="negate">Negative</option>
+                </select>
+            </fieldset>
+            <button type="button" onclick="getCat()"><span>See your cat! </span></button>
+        </form>
+        </div>
+        <div id="overlay"></div>
+            <div id="popup">
+                <h2>Are you sure you want to leave page?</h2>
+                <button id="popupYes" onclick="location.href='../Main/index.html'"><span>Yes</span></button>
+                <button id="popupNo" onclick="closePopup()"><span>No</span></button>
+            </div>
+        <script src="catGifs.js"></script>
+    </body>
+</html>

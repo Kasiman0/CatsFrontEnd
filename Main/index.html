@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Get a cat!</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="navbar">
+            <ul>
+                <li><h1>Cats</h1></li>
+                <li><a href="index.html">Get a cat!</a></li>
+                <li><a href="#" onclick="loadPopup();return false;">Make a gif talk!</a></li>
+            </ul>
+        </div>
+        <div class="card" id="card">
+            <div id="cardPic">
+                <img id="catPic" src="">
+            </div>
+            <div>
+                <h4 id="cardText"></h4>
+            </div>
+        </div>
+        <div id="formWrapper">
+        <form onsubmit="return false">
+            <fieldset>
+            <legend>Choose cat color!</legend>
+                <select id="Color">
+                    <option value="any">Any</option>
+                    <option value="gray">Gray</option>
+                    <option value="orange">Orange</option>
+                    <option value="black">Black</option>
+                </select>
+            </fieldset>
+            <fieldset>
+            <legend>Choose additional tags!</legend>
+                <input type="checkbox" id="Cute" value="cute">
+                <label for="Cute">Cute</label>
+                <input type="checkbox" id="Kitten" value="kitten">
+                <label for="Kitten">Kitten</label>
+                <input type="checkbox" id="Sleeping" value="sleeping">
+                <label for="Sleeping">Sleeping</label>
+            </fieldset>
+            <button type="button" onclick="getCat()"><span>See your cat! </span></button>
+        </form>
+        </div>
+        <div id="overlay"></div>
+            <div id="popup">
+                <h2>Are you sure you want to leave page?</h2>
+                <button id="popupYes" onclick="location.href='../CatGifs/catGifs.html'"><span>Yes</span></button>
+                <button id="popupNo" onclick="closePopup()"><span>No</span></button>
+            </div>
+        <script src="main.js"></script>
+    </body>
+</html>
